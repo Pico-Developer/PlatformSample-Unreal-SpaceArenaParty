@@ -48,16 +48,6 @@ private:
     UPROPERTY()
     UPico_Room* CurrentPicoRoom;
 
-    FRoomGetModeratedRooms RoomGetModerateRoomsDelegate;
-
-    FRoomLeave RoomLeaveDelegate;
-
-
-    FOnPresenceSetComplete PresenceSetDelegate;
-    FOnSentInvitesComplete SentInvitesDelegate;
-    FOnLaunchInvitePanelComplete LaunchInvitePanelDelegate;
-    FOnPresenceClearComplete PresenceClearDelegate;
-
     FTimerHandle SendPackTimerHandle;
     FTimerHandle ReadPackTimerHandle;
     FGetNextUserPage NextUserPageDelegate;
@@ -136,6 +126,9 @@ public:
     void OnJoinRoomComplete(bool bIsError, int ErrorCode, const FString& ErrorMessage, UPico_Room* Room);
 
     // LeaveRoom
+
+    FRoomLeave RoomLeaveDelegate;
+
     UFUNCTION(BlueprintCallable)
     void LeaveRoom();
 
@@ -144,6 +137,9 @@ public:
 
 
     void SendUserPacket();
+
+    // GetModeratedRooms
+    FRoomGetModeratedRooms RoomGetModerateRoomsDelegate;
 
     UFUNCTION(BlueprintCallable)
     void ReadRoomList(FGMGetRoomListCompleteDelegate InGetListDelegate);
@@ -167,10 +163,15 @@ public:
     UFUNCTION(BlueprintCallable)
     void InviteSelectUsers(bool bLaunch);
 
+
+
+    FOnPresenceSetComplete PresenceSetDelegate;
     void OnPresenceSetComplete(bool bIsSuccessed, const FString& ErrorMessage);
 
+    FOnSentInvitesComplete SentInvitesDelegate;
     void OnPresenceSendInvitesComplete(bool bIsSuccessed, const FString& ErrorMessage);
 
+    FOnLaunchInvitePanelComplete LaunchInvitePanelDelegate;
     void OnLaunchInvitePanelComplete(bool bIsSuccessed, const FString& ErrorMessage);
 
     UFUNCTION(BlueprintCallable)
@@ -184,6 +185,10 @@ public:
 
     void SetCurrentPresence();
     
+
+    // Clear Presence
+    FOnPresenceClearComplete PresenceClearDelegate;
+
     UFUNCTION(BlueprintCallable)
     void ClearCurrentPresence();
 
@@ -193,4 +198,9 @@ public:
 
 
     void PlatformLog(const FString& NewLog);
+
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    FString GetDestinationConfig();
+
+
 };

@@ -549,7 +549,8 @@ void APlatformSquareGameModeBase::SetCurrentPresence()
     PresenceSetDelegate.Unbind();
     PresenceSetDelegate.BindUObject(this, &APlatformSquareGameModeBase::OnPresenceSetComplete);
     PlatformLog(FString((TEXT("Call APlatformSquareGameModeBase::SetCurrentPresence MatchSessionID = %s!"), *MatchSessionID)));
-    PicoPresenceInterface->PresenceSet(FString(TEXT("PicoWorld")), FString(), MatchSessionID, true, FString(), PresenceSetDelegate);
+    FString Destination = GetDestinationConfig();
+    PicoPresenceInterface->PresenceSet(Destination, FString(), MatchSessionID, true, FString(), PresenceSetDelegate);
 }
 
 void APlatformSquareGameModeBase::JoinRoom(const FString& RoomID)
@@ -641,5 +642,10 @@ void APlatformSquareGameModeBase::PlatformLog(const FString& NewLog)
     {
         PicoGISubsystem->SetLogString(NewLog);
     }
+}
+
+FString APlatformSquareGameModeBase::GetDestinationConfig()
+{
+    return GConfig->GetStr(TEXT("/Script/OnlineSubsystemPico.OnlinePicoSettings"), TEXT("Destination"), GEngineIni);
 }
 
