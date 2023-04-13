@@ -1,8 +1,0 @@
-{
-	"BuildId": "17155196",
-	"Modules": 
-	{
-		"PicoSpatialAudio": "UE4Editor-PicoSpatialAudio.dll",
-		"PicoSpatialAudioEditor": "UE4Editor-PicoSpatialAudioEditor.dll"
-	}
-}
