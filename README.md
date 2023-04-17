@@ -1,5 +1,6 @@
 # SpaceArenaParty-Unreal
 Demo for Pico Platform sdk Unreal plugin.
+https://developer-cn.pico-interactive.com/sdk?deviceId=1&platformId=2&itemId=13
 
 
 | Name  | Version    |
