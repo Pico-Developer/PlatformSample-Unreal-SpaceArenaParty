@@ -1,8 +1,7 @@
-# SpatialAudioSample-Unreal
+# SpaceArenaParty-Unreal
 Demo for Pico Platform sdk Unreal plugin.
 
-For detailed steps, please refer to [PICO Developer Documentation](https://developer-global.pico-interactive.com/document/ue4) > Quickstart > Quickstart with demo
-For SDK access,please refer to Pico Unreal Integration SDK.
+
 | Name  | Version    |
 | ----  |  ----      |
 | Unreal Engine | 4.27 |
@@ -14,4 +13,4 @@ For SDK access,please refer to Pico Unreal Integration SDK.
 
 
 ## Licenses
-This project is released under the
+
