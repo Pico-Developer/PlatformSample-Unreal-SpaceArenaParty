@@ -4,6 +4,7 @@ Space Arena Party is a multiplayer social game demo that integrates the "Friends
 - Creating and joining virtual rooms
 - Real-time multiplayer interaction
 - Friend system, including viewing friend list and inviting friends
+- Use PICO Networking synchronization information
 
 
 
