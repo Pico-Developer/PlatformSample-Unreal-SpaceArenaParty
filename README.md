@@ -8,21 +8,20 @@ Space Arena Party is a multiplayer social game demo that integrates the "Friends
 
 
 
-# Requirement
+## Requirement
 
 | Environment          | Version             |
 |----------------------|---------------------|
 | Unreal Engine        |    4.27    |
-| Pico Integration SDK | 2.1.4           |
-| Pico ROM             | 5.4.0           |
+| PICO Unreal Integration SDK | 2.1.4 or later          |
+| PiICO ROM  (system version)           | 5.4.0 or later     |
 
-Download Unreal Plugins from:
-https://developer-cn.pico-interactive.com/sdk?deviceId=1&platformId=2&itemId=13
+Click [here](https://developer-cn.pico-interactive.com/sdk?deviceId=1&platformId=2&itemId=13) to download the latest version of Unreal PICO Unreal Integration SDK.
 
-## Description && Quick Start
+## Documentation
 
-Please view our official website documentation
-https://developer-cn.pico-interactive.com/document/ue4/social-interaction-demo/
+For details, see PICO official documentation [Social interaction-Demo](https://developer-cn.pico-interactive.com/document/unreal/social-interaction-demo/).
 
 ## Licenses
+
 This project is licensed under the MIT License. See the LICENSE file for details.
