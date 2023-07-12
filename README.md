@@ -20,7 +20,7 @@ Click [here](https://developer-cn.pico-interactive.com/sdk?deviceId=1&platformId
 
 ## Documentation
 
-For details, see PICO official documentation [Social interaction-Demo](https://developer-cn.pico-interactive.com/document/unreal/social-interaction-demo/).
+For details, see PICO official documentation [Social interaction-Demo](https://developer-global.pico-interactive.com/document/unreal/social-interaction-demo/).
 
 ## Licenses
 
